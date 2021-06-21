@@ -13,10 +13,10 @@ pipeline {
             steps {
                 script{
                     if ('%gender%' == 'female'){
-                        bat 'java -cp target/assessment1-1.0.jar com.sapient.App 1'
+                        bat 'java -cp target/assessment1-1.0.jar com.sapient.App 2'
                     }
                     else{
-                        bat 'java -cp target/assessment1-1.0.jar com.sapient.App 2'
+                        bat 'java -cp target/assessment1-1.0.jar com.sapient.App 1'
                     }
                 }
             }
