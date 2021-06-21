@@ -11,13 +11,11 @@ pipeline {
         }
         stage('Run') {
             steps {
-                bat 'java -cp target/assessment1-1.0.jar com.sapient.App'
-                String g = ${%gender%}
-                if (g.equals('female')){
-                    bat '1'
+                if ('%gender%' == 'female'){
+                    bat 'java -cp target/assessment1-1.0.jar com.sapient.App 1'
                 }
                 else{
-                    bat '2'
+                    bat 'java -cp target/assessment1-1.0.jar com.sapient.App 2'
                 }
             }
         }
