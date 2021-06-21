@@ -14,7 +14,7 @@ public class App {
     ICriteria female = new FemaleCriteria();
     System.out.println("Press 1 for getting the list of males");
     System.out.println("Press 2 for getting the list of females");
-    int choice = Integer.parseInt(new BufferedReader(new InputStreamReader(System.in)).readLine());
+    int choice = Integer.parseInt(args[0]);
     if (choice == 1) {
       System.out.println("\n\n-------- male list ------------");
       male.meetCriteria(map).forEach((t) -> System.out.println(t.getEmpName() + " " + t.getSalary() + " | "
