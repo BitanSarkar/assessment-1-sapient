@@ -6,6 +6,7 @@ pipeline {
     stages {
         stage('Install') {
             steps {
+                bat 'echo %gender%'
                 bat 'mvn clean install'
             }
         }
