@@ -8,7 +8,7 @@ import java.util.HashMap;
 public class App {
 
   public static void main(String[] args) throws IOException {
-    String srcDest = "\\resources\\emp.txt";
+    String srcDest = "./resources/emp.txt";
     HashMap<String, Employee> map = new Validator().getAndValidate(srcDest);
     ICriteria male = new MaleCriteria();
     ICriteria female = new FemaleCriteria();
