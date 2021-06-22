@@ -6,17 +6,17 @@ pipeline {
     stages {
         stage('Install') {
             steps {
-                cmd 'mvn clean install'
+                sh 'mvn clean install'
             }
         }
         stage('Run') {
             steps {
                 script{
                     if ('%gender%' == 'female'){
-                        cmd 'java -cp target/assessment1-1.0.jar com.sapient.App 2'
+                        sh 'java -cp target/assessment1-1.0.jar com.sapient.App 2'
                     }
                     else{
-                        cmd 'java -cp target/assessment1-1.0.jar com.sapient.App 1'
+                        sh 'java -cp target/assessment1-1.0.jar com.sapient.App 1'
                     }
                 }
             }
